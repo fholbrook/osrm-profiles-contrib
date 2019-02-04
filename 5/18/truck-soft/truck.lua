@@ -22,29 +22,29 @@ function setup()
       -- For shortest distance without penalties for accessibility
       -- weight_name                     = 'distance',
       process_call_tagless_node      = false,
-      u_turn_penalty                 = 30,
+      u_turn_penalty                 = 80,
       continue_straight_at_waypoint  = true,
       use_turn_restrictions          = true,
       left_hand_driving              = false,
-      traffic_light_penalty          = 2,
+      traffic_light_penalty          = 4,
     },
 
     default_mode              = mode.driving,
     default_speed             = 10,
     oneway_handling           = true,
     side_road_multiplier      = 0.8,
-    turn_penalty              = 25,
+    turn_penalty              = 50,
     speed_reduction           = 0.8,
     turn_bias                 = 1.075,
     cardinal_directions       = false,
 
     -- Size of the vehicle, to be limited by physical restriction of the way
-    vehicle_height = 2.8, -- in meters
-    vehicle_width = 2.2, -- in meters
+    vehicle_height = 3.6, -- in meters
+    vehicle_width = 2.6, -- in meters
 
     -- Size of the vehicle, to be limited by legal restriction of the way
-    vehicle_length = 6.0, -- in meters
-    vehicle_weight = 6000, -- in kilograms
+    vehicle_length = 18.0, -- in meters
+    vehicle_weight = 36000, -- in kilograms
 
     -- a list of suffixes to suppress in name change instructions. The suffixes also include common substrings of each other
     suffix_list = {
@@ -138,12 +138,12 @@ function setup()
 
     speeds = Sequence {
       highway = {
-        motorway        = 90,
-        motorway_link   = 45,
-        trunk           = 85,
-        trunk_link      = 40,
-        primary         = 65,
-        primary_link    = 30,
+        motorway        = 105,
+        motorway_link   = 60,
+        trunk           = 105,
+        trunk_link      = 60,
+        primary         = 95,
+        primary_link    = 45,
         secondary       = 55,
         secondary_link  = 25,
         tertiary        = 40,
@@ -157,20 +157,20 @@ function setup()
 
     highway_penalties = {
       motorway        = 1,
-      motorway_link   = 1,
+      motorway_link   = 0.99,
       trunk           = 1,
-      trunk_link      = 1,
-      primary         = 1,
-      primary_link    = 1,
-      secondary       = 1,
-      secondary_link  = 1,
-      tertiary        = 0.9,
-      tertiary_link   = 0.9,
-      unclassified    = 0.8,
-      residential     = 0.7,
-      living_street   = 0.3,
-      service         = 0.2,
-      track           = 0.1
+      trunk_link      = 0.99,
+      primary         = 0.99,
+      primary_link    = 0.98,
+      secondary       = 0.80,
+      secondary_link  = 0.79,
+      tertiary        = 0.70,
+      tertiary_link   = 0.69,
+      unclassified    = 0.70,
+      residential     = 0.60,
+      living_street   = 0.30,
+      service         = 0.20,
+      track           = 0.10
     },
 
     service_penalties = {
