@@ -39,12 +39,12 @@ function setup()
     cardinal_directions       = false,
 
     -- Size of the vehicle, to be limited by physical restriction of the way
-    vehicle_height = 3.6, -- in meters
-    vehicle_width = 2.6, -- in meters
+    vehicle_height = 3.0, -- in meters
+    vehicle_width = 2.2, -- in meters
 
     -- Size of the vehicle, to be limited by legal restriction of the way
-    vehicle_length = 18.0, -- in meters
-    vehicle_weight = 36000, -- in kilograms
+    vehicle_length = 10.0, -- in meters
+    vehicle_weight = 1000, -- in kilograms
 
     -- a list of suffixes to suppress in name change instructions. The suffixes also include common substrings of each other
     suffix_list = {
